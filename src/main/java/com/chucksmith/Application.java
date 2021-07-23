@@ -4,18 +4,36 @@ import javax.management.openmbean.ArrayType;
 import java.lang.reflect.Array;
 import java.util.*;
 
+class User {
+
+}
+
 public class Application {
 
     public static void main(String[] args) {
 
-//************** The Accumulator Pattern *****************
+//*************** boxing/unboxing **********************
+//wrapper classes
+        int x = 4;
+        // calls y.intValue();
+        Integer y = 7;
 
-        Accumulator acc = new Accumulator();
-        List<Integer> input = Arrays.asList(1,2,3,4,5);
-        System.out.println(acc.sum(input));
-        System.out.println(acc.shortWords("the,green,jungle,is,excellent", 6));
-        String[] input2 = new String[]{"Alice"};
-        System.out.println(acc.toSentence(input2));
+        System.out.println(x+y);
+        ArrayList<Integer> number = new ArrayList<Integer>();
+        // calls Integer.valueOf(1);
+        number.add(1);
+        number.add(2);
+        ArrayList<User> users = new ArrayList<User>();
+
+
+//************** The Accumulator Pattern *****************
+//
+//        Accumulator acc = new Accumulator();
+//        List<Integer> input = Arrays.asList(1,2,3,4,5);
+//        System.out.println(acc.sum(input));
+//        System.out.println(acc.shortWords("the,green,jungle,is,excellent", 6));
+//        String[] input2 = new String[]{"Alice"};
+//        System.out.println(acc.toSentence(input2));
         //see problem1.txt for explanation of how to create the methods.
 
 
