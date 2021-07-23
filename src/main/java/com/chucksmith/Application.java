@@ -1,33 +1,42 @@
 package com.chucksmith;
 
+import javax.management.openmbean.ArrayType;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
+import java.util.*;
 
 public class Application {
 
     public static void main(String[] args) {
 
+//************** The Accumulator Pattern *****************
+
+        Accumulator acc = new Accumulator();
+        List<Integer> input = Arrays.asList(1,2,3,4,5);
+        System.out.println(acc.sum(input));
+        System.out.println(acc.shortWords("the,green,jungle,is,excellent", 6));
+        String[] input2 = new String[]{"Alice"};
+        System.out.println(acc.toSentence(input2));
+        //see problem1.txt for explanation of how to create the methods.
+
+
 // ************** HashMaps ********************************
-        HashMap<String, Integer> birthYears = new HashMap<>();
-        birthYears.put("angelica", 1756);
-        birthYears.put("alexander", 1757);
-        birthYears.put("eliza", 1799);
-        System.out.println(birthYears);
-        System.out.println(birthYears.get("alexander"));
-        System.out.println(birthYears.containsKey("aaron"));
-
-        birthYears.forEach((key, value) -> {
-            System.out.println(key);
-            System.out.println(key + value);
-        });
-
-        HashMap<Integer, String> values = new HashMap<>();
-        values.put(747, "airplane");
-        values.put(10, "Laphroaig");
-        System.out.println(values.containsKey(747));
+//        HashMap<String, Integer> birthYears = new HashMap<>();
+//        birthYears.put("angelica", 1756);
+//        birthYears.put("alexander", 1757);
+//        birthYears.put("eliza", 1799);
+//        System.out.println(birthYears);
+//        System.out.println(birthYears.get("alexander"));
+//        System.out.println(birthYears.containsKey("aaron"));
+//
+//        birthYears.forEach((key, value) -> {
+//            System.out.println(key);
+//            System.out.println(key + value);
+//        });
+//
+//        HashMap<Integer, String> values = new HashMap<>();
+//        values.put(747, "airplane");
+//        values.put(10, "Laphroaig");
+//        System.out.println(values.containsKey(747));
 
 // ************** Arrays and Lists ************************
         //Arrays and Lists

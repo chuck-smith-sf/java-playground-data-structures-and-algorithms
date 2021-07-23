@@ -1,0 +1,21 @@
+***** accumulator exercises: *******
+Write a method that:
+
+    takes a list of integers
+
+    and returns the sum of those integers.
+
+List<Integers> = int
+
+1,2,3 => 6 normal
+
+[] => 0
+
+*******
+Write a method that:
+    Write a string (contains a comma-delimited list of words)
+    add a number representing a max length
+    return a list of all the words in the string that are less than the given length
+
+"the,green,jungle", 6 => ["the", "green"]
+"" => []
