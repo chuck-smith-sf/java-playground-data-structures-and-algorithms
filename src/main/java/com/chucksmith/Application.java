@@ -12,17 +12,54 @@ public class Application {
 
     public static void main(String[] args) {
 
+//******************* Lambdas *************************
+
+        List<String> words = new ArrayList<>(Arrays.asList("The", "two", "biggest", "problems", "In", "computer", "science"));
+        List<String> fileNames = new ArrayList<>(Arrays.asList("My Report.csv", "The Best Deck.pdf", "Thanks for all the fishes.doc"));
+
+        fileNames.forEach(file -> System.out.println(file.replace(" ", "-")));
+
+        for (String word:
+             words) {
+            System.out.println(word.toUpperCase());
+        }
+
+        // lambda: three parts: 1(parameter list "word"), 2(arrow token "->"), 3(Body that gets executed(sout...)
+        words.forEach(word -> System.out.println(word.toUpperCase()));
+
+        //expended - performs the same as above
+        //multiple parameters or statements require curly braces
+        words.forEach(word -> {
+            System.out.println(word.toUpperCase());
+        });
+
+        //example multiple parameters
+        words.sort((a, b) -> a.compareTo(b));
+        // redo above with reference method (Method reference)
+        words.sort(String::compareTo);
+
+        //example multiple statements in curly braces
+        words.removeIf(word -> {
+            String firstLetter = word.substring(0, 1);
+            String rest = word.substring(1);
+            return firstLetter.matches("[A-Z]") && rest.matches("^[a-z]+$");
+        });
+
+        System.out.println(words);
+
+
+
 //************ choosing the right data structure ******
 
-        XMLElement element1 = new XMLElement();
-        element1.addAttribute("id", "element");
-
-        XMLElement element2 = new XMLElement();
-        element2.addAttribute("name", "e2");
-
-        element1.addChild(element2);
-
-        System.out.println(element1);
+//        XMLElement element1 = new XMLElement();
+//        element1.addAttribute("id", "element");
+//
+//        XMLElement element2 = new XMLElement();
+//        element2.addAttribute("name", "e2");
+//
+//        element1.addChild(element2);
+//
+//        System.out.println(element1);
 
 //*************** boxing/unboxing **********************
 //wrapper classes
