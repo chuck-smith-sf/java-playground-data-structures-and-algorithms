@@ -12,18 +12,30 @@ public class Application {
 
     public static void main(String[] args) {
 
+//************ choosing the right data structure ******
+
+        XMLElement element1 = new XMLElement();
+        element1.addAttribute("id", "element");
+
+        XMLElement element2 = new XMLElement();
+        element2.addAttribute("name", "e2");
+
+        element1.addChild(element2);
+
+        System.out.println(element1);
+
 //*************** boxing/unboxing **********************
 //wrapper classes
-        int x = 4;
-        // calls y.intValue();
-        Integer y = 7;
-
-        System.out.println(x+y);
-        ArrayList<Integer> number = new ArrayList<Integer>();
-        // calls Integer.valueOf(1);
-        number.add(1);
-        number.add(2);
-        ArrayList<User> users = new ArrayList<User>();
+//        int x = 4;
+//        // calls y.intValue();
+//        Integer y = 7;
+//
+//        System.out.println(x+y);
+//        ArrayList<Integer> number = new ArrayList<Integer>();
+//        // calls Integer.valueOf(1);
+//        number.add(1);
+//        number.add(2);
+//        ArrayList<User> users = new ArrayList<User>();
 
 
 //************** The Accumulator Pattern *****************
